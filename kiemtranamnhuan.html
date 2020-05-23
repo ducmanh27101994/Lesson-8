@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Năm Nhuận</title>
+</head>
+<body>
+<h1>Ứng dụng kiểm tra năm nhuận</h1>
+<p>Nhập số năm bạn muốn kiểm tra</p>
+<input type="text" id="year"/>
+
+<button type="submit" onclick="timNamNhuan()">Kiểm Tra</button>
+<p id="ketqua"></p>
+
+<script>
+    function timNamNhuan() {
+        let area = document.getElementById("year").value; //string
+        a = parseInt(area) ; //integer
+
+        if (a % 4 == 0){
+            if (a % 100 == 0){
+                if (a % 400 == 0) {
+                    document.getElementById("ketqua").innerHTML = ("Là năm nhuận");
+                }else {
+                    document.getElementById("ketqua").innerHTML = ("Không là năm nhuận");
+                }
+            }else {
+                document.getElementById("ketqua").innerHTML = ("Là năm nhuận");
+            }
+        } else {
+            document.getElementById("ketqua").innerHTML = ("Không phải năm nhuận");
+
+        }
+
+    }
+
+</script>
+
+
+
+</body>
+</html>
